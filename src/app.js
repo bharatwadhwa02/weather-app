@@ -4,6 +4,8 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const current = require('./utils/current')
 
+const port = process.env.PORT || 3000
+
 const app = express()
 
 //app.com
@@ -104,6 +106,6 @@ app.get('*' , (req,res)=>{
   } )
 })
 
-app.listen(3000 , ()=>{
-  console.log('server in up on port 3000')
+app.listen(port , ()=>{
+  console.log('server in up on port '+port)
 })
